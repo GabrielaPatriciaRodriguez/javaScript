@@ -113,25 +113,25 @@ switch (comida) {
 
 // While con Switch
 
-let comida = prompt("elija carne roja, vegetales o pastas y le diremos que opciones tenemos");
+let comida2 = prompt("elija carne roja, vegetales o pastas y le diremos que opciones tenemos");
 
-while (comida != "") {
-    switch (comida.toUpperCase()) {
+while (comida2 != "") {
+    switch (comida2.toUpperCase()) {
         case "CARNE ROJA":
-            alert("ud. eligio " + comida + " tenemos milanesas con pure");
+            alert("ud. eligio " + comida2 + " tenemos milanesas con pure");
             break;
     
         case "VEGETALES":
-            alert("ud. eligio " + comida + " tenemos tarta de espinaca");
+            alert("ud. eligio " + comida2 + " tenemos tarta de espinaca");
             break;
     
         case "PASTAS":
-            alert("ud. eligio " + comida + " tenemos ravioles");
+            alert("ud. eligio " + comida2 + " tenemos ravioles");
             break;
     
         default:
             alert("No tenemos esa opcion");
             break;
     }
-    comida = prompt("elija carne roja, vegetales o pastas y le diremos que opciones tenemos");
+    comida2 = prompt("elija carne roja, vegetales o pastas y le diremos que opciones tenemos");
 }

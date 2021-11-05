@@ -133,5 +133,5 @@ while (comida2 != "") {
             alert("No tenemos esa opcion");
             break;
     }
-    comida2 = prompt("elija carne roja, vegetales o pastas y le diremos que opciones tenemos");
+    comida2 = prompt("elija carne roja, vegetales o pastas y le diremos que opciones tenemos o presione aceptar sin ingresar ningun dato");
 }

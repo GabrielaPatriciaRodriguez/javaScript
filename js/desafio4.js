@@ -2,20 +2,20 @@
 
 /*Necesito ingresar productos y precios*/
 
-/*function solicitarProductoYPrecio () {
+function solicitarProductoYPrecio () {
     let producto = prompt("Que producto quiere ingresar?").toUpperCase();
     let precio = prompt("Cual es su precio?");
     return("Ud. ingreso " + producto + " Y su precio es " + precio);
 };
 
 /* Voy a solicitar 3 veces por ahora */
-/*console.log(solicitarProductoYPrecio());
 console.log(solicitarProductoYPrecio());
-console.log(solicitarProductoYPrecio());*/
+console.log(solicitarProductoYPrecio());
+console.log(solicitarProductoYPrecio());
 
 /*Necesito la funcion que permita sumar segun los montos pasados, y que lo acumule en la variable resultado*/
 
-/*let resultado = 0;
+let resultado = 0;
 
 function sumar(precio1, precio2, precio3) {
     resultado = precio1 + precio2 + precio3;

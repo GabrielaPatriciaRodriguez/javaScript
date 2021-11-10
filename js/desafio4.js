@@ -1,37 +1,37 @@
-//Mi proyecto: Sera una aplicacion que permita cobrar las mesas de un Resto Bar.
+/*Mi proyecto: Sera una aplicacion que permita conocer la recaudacion del dia de un Resto Bar 
+de acuerdo al consumo total de cada mesa disponible.*/
 
-/*Necesito ingresar productos y precios*/
-
-function solicitarProductoYPrecio () {
-    let producto = prompt("Que producto quiere ingresar?").toUpperCase();
-    let precio = prompt("Cual es su precio?");
-    return("Ud. ingreso " + producto + " Y su precio es " + precio);
-};
-
-/* Voy a solicitar 3 veces por ahora */
-console.log(solicitarProductoYPrecio());
-console.log(solicitarProductoYPrecio());
-console.log(solicitarProductoYPrecio());
-
-/*Necesito la funcion que permita sumar segun los montos pasados, y que lo acumule en la variable resultado*/
-
-let resultado = 0;
-
-function sumar(precio1, precio2, precio3) {
-    resultado = precio1 + precio2 + precio3;
+/* Funcion llamada por la proxima funcion. Esta funcion permite conocer el total de cada mesa */
+function totalMesa (numMesa) {
+    let total = parseFloat(prompt("Ingrese el total de la mesa: " + numMesa));
+    return total;
 }
 
-sumar(50, 50, 50);
+/* Esta funcion me dira la recaudacion del dia, en base al numero de mesas. El iterador comienza
+en 1 y recaudacion esta en 0. El while tiene la condicion de que mientras el iterador sea menor 
+o igual al numero de mesas recaudacion sera igual a recaudacion mas el totalMesa (llama a esta funcion)
+i: primero es mesa 1 y la recaudacion es por ej $100, luego i es mesa 2 y su recaudacion es por ej $ 200, 
+recaudacion aumenta a $300, i pasa a ser mesa 3, recaudacion aumenta nuevamente. Y asi hasta que
+i sea <= al numero de mesas y termina el ciclo tirando el alert. */
 
-console.log("La mesa dio un total de $ " + resultado);
+function recaudacionDia (numerosMesas) {
+    let i = 1;
+    let recaudacion = 0;
+    while (i <= numerosMesas) {
+        recaudacion = recaudacion + totalMesa(i);
+        i++;
+    }
+    alert("El total de las mesas del dia es $ " + recaudacion + ", mesas habilitadas: " + numerosMesas);
+}
 
-/* Quiero restar, descontar un 10 porciento por compra en efectivo por ej */
+/* Es lo primero que va a ejecutar el programa */
 
+function main () {
+    alert("Se trata de una aplicacion que permite conocer la recaudacion del dia de acuerdo al consumo total de cada mesa disponible");
+    let mesasHabilitadas = parseInt(prompt("Ingrese el total de mesas habilitadas hoy"));
+    recaudacionDia(mesasHabilitadas);
+}
 
-
-/*Desafio complementario: Pensar un proceso complejo y resolverlo a traves de 3 funciones
-1. Ingresar precios de los productos.
-2. Sumar los productos.
-3. Restar descuento 10%.
-4. Mostrar resultado.
- */
+main();
+/* Llamo a la funcion main para que muestre un alerta al usuario, donde explique en que
+consiste el programa. Y que el usuario ingrese el total de mesas habilitadas en el dia */
